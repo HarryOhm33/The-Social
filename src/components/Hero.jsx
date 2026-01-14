@@ -119,7 +119,7 @@ const Hero = () => {
             >
               <div className={`rounded-2xl overflow-hidden ${theme.shadow}`}>
                 <img
-                  src="/src/assets/hero.gif"
+                  src="/hero.gif"
                   alt="Ayushi - Social Media Strategist"
                   className="w-full object-contain bg-black"
                 />
@@ -132,7 +132,7 @@ const Hero = () => {
       {/* ================= BOTTOM FULL-WIDTH GIF ================= */}
       <div className="w-screen overflow-hidden">
         <img
-          src="/src/assets/slider.gif"
+          src="/slider.gif"
           alt="Decorative motion strip"
           className="w-full h-[90px] object-fill"
         />
