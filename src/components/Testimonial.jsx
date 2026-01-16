@@ -181,7 +181,7 @@ const Testimonial = () => {
                     <div className="relative">
                       {/* Client Photo Placeholder - Replace with actual image */}
                       <img
-                        src={`/src/assets/clients/${testimonial.photo}`} // or use full URL
+                        src={`${testimonial.photo}`} // or use full URL
                         alt={testimonial.name}
                         className="w-14 h-14 rounded-full object-cover border-2 border-white dark:border-gray-900 shadow-lg"
                       />
