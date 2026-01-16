@@ -15,22 +15,6 @@ const Services = () => {
 
   const services = [
     {
-      icon: FiTrendingUp,
-      title: "Social Media Management",
-      description:
-        "Designed for brands that want consistency, clarity, and a strong online presence without guessing what to post next.",
-      features: [
-        "Content strategy & monthly planning",
-        "Platform-specific content creation",
-        "Caption writing & content optimization",
-        "Visual direction & consistency",
-        "Performance tracking & insights",
-      ],
-      buttonText: "Work With Me →",
-      color: "from-blue-500 to-cyan-400",
-      iconColor: "bg-gradient-to-br from-blue-500 to-cyan-500",
-    },
-    {
       icon: FiMessageSquare,
       title: "Copywriting & Content Strategy",
       description:
@@ -46,6 +30,23 @@ const Services = () => {
       color: "from-purple-500 to-pink-400",
       iconColor: "bg-gradient-to-br from-purple-500 to-pink-500",
     },
+    {
+      icon: FiTrendingUp,
+      title: "Social Media Management",
+      description:
+        "Designed for brands that want consistency, clarity, and a strong online presence without guessing what to post next.",
+      features: [
+        "Content strategy & monthly planning",
+        "Platform-specific content creation",
+        "Caption writing & content optimization",
+        "Visual direction & consistency",
+        "Performance tracking & insights",
+      ],
+      buttonText: "Work With Me →",
+      color: "from-blue-500 to-cyan-400",
+      iconColor: "bg-gradient-to-br from-blue-500 to-cyan-500",
+    },
+
     {
       icon: FiPackage,
       title: "Full Marketing Package",

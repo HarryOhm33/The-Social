@@ -5,6 +5,8 @@ import {
   FiBarChart2,
   FiCheckCircle,
   FiRefreshCw,
+  FiTrendingUp,
+  FiArrowUpRight,
 } from "react-icons/fi";
 import { useTheme } from "../contexts/ThemeContext";
 
@@ -15,30 +17,58 @@ const About = () => {
     {
       icon: FiTarget,
       title: "Understand",
-      description:
-        "Deep dive into your brand, audience, and goals before anything is created.",
+      description: "Deep dive into brand, audience, and business goals.",
       color: "from-purple-500 to-blue-500",
     },
     {
       icon: FiBarChart2,
       title: "Strategize",
       description:
-        "Build a content and messaging system aligned with your business objectives.",
+        "Build a clear content & messaging framework aligned with growth.",
       color: "from-pink-500 to-purple-500",
     },
     {
       icon: FiCheckCircle,
       title: "Execute",
-      description:
-        "Create purposeful content that's sustainable, measurable, and scalable.",
+      description: "Create consistent, scalable, high-impact content.",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: FiRefreshCw,
       title: "Optimize",
-      description:
-        "Continuously refine based on performance insights and evolving goals.",
+      description: "Track performance and continuously improve results.",
       color: "from-cyan-500 to-green-500",
+    },
+  ];
+
+  const featuredWork = [
+    {
+      title: "Floww",
+      description: "Social Media & Content Ecosystem",
+      stats: "+627% IG Growth",
+      color: "from-blue-500 to-purple-500",
+      icon: FiTrendingUp,
+    },
+    {
+      title: "Atom HR",
+      description: "Product Launch Campaign",
+      stats: "3× Engagement",
+      color: "from-purple-500 to-pink-500",
+      icon: FiTrendingUp,
+    },
+    {
+      title: "Startup Mahakumbh",
+      description: "Event Branding",
+      stats: "200K+ Impressions",
+      color: "from-pink-500 to-orange-500",
+      icon: FiTrendingUp,
+    },
+    {
+      title: "@thesocialayushi",
+      description: "Personal Brand Growth",
+      stats: "Strategic Growth",
+      color: "from-cyan-500 to-blue-500",
+      icon: FiTrendingUp,
     },
   ];
 
@@ -93,6 +123,24 @@ const About = () => {
       transition: {
         type: "spring",
         stiffness: 300,
+      },
+    },
+  };
+
+  const workItemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      x: 5,
+      transition: {
+        duration: 0.2,
       },
     },
   };
@@ -249,6 +297,88 @@ const About = () => {
           </div>
         </motion.div>
 
+        {/* Featured Work Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-16 md:mt-20 lg:mt-24"
+        >
+          <div className="text-center mb-10 md:mb-12">
+            <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${theme.text}`}>
+              Featured Work
+            </h3>
+            <div className="h-1 w-20 mx-auto mb-6">
+              <div
+                className={`h-full w-full bg-gradient-to-r ${theme.gradientFrom} ${theme.gradientTo}`}
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {featuredWork.map((work, index) => (
+              <motion.div
+                key={work.title}
+                variants={workItemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                custom={index}
+                whileHover="hover"
+                className="group"
+              >
+                <div
+                  className={`h-full ${theme.cardBg} rounded-xl ${theme.shadow} border ${theme.border} p-5 md:p-6 relative overflow-hidden transition-all duration-300 group-hover:shadow-xl`}
+                >
+                  {/* Gradient Background */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r ${work.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}
+                  />
+
+                  {/* Top Icon */}
+                  <div className="relative mb-4">
+                    <div
+                      className={`w-10 h-10 rounded-lg bg-gradient-to-r ${work.color} flex items-center justify-center mb-3`}
+                    >
+                      <work.icon className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Work Title & Description */}
+                  <div className="relative mb-3">
+                    <h4
+                      className={`text-lg md:text-xl font-bold mb-1 ${theme.text}`}
+                    >
+                      {work.title}
+                    </h4>
+                    <p className={`text-sm ${theme.textMuted}`}>
+                      {work.description}
+                    </p>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="relative">
+                    <div
+                      className={`inline-flex items-center px-3 py-1.5 rounded-full ${theme.badgeBg} ${theme.badgeText} text-xs md:text-sm font-semibold`}
+                    >
+                      <FiArrowUpRight className="w-3 h-3 mr-1" />
+                      {work.stats}
+                    </div>
+                  </div>
+
+                  {/* Hover Arrow */}
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
+                      <FiArrowUpRight className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Process Explanation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -264,20 +394,20 @@ const About = () => {
               >
                 Why This Approach Works
               </h3>
+
               <p className={`${theme.textMuted} leading-relaxed`}>
-                By focusing on structure first, we create a foundation that
-                supports sustainable growth. This systematic approach ensures
-                every piece of content serves a purpose and moves you closer to
-                your business goals.
+                Structured systems remove guesswork. Every post serves a clear
+                business purpose, with results that are measurable, scalable,
+                and focused on long-term brand growth rather than trends.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Structured", value: "100%" },
-                { label: "Measurable", value: "100%" },
-                { label: "Scalable", value: "100%" },
-                { label: "Results", value: "4x ROI" },
+                { label: "Structured Systems", value: "Clarity" },
+                { label: "Purpose-Driven", value: "Intentional" },
+                { label: "Measurable", value: "Trackable" },
+                { label: "Scalable Growth", value: "Long-Term" },
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -304,24 +434,6 @@ const About = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* CTA */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="text-center mt-12 md:mt-16"
-        >
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className={`inline-block px-8 py-4 rounded-full ${theme.buttonPrimary} ${theme.buttonPrimaryHover} font-semibold cursor-pointer ${theme.shadow}`}
-          >
-            <span className="text-lg">
-              Ready to build your marketing structure?
-            </span>
-          </motion.div>
-        </motion.div> */}
       </div>
     </section>
   );

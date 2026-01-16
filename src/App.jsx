@@ -5,6 +5,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+import Testimonial from "./components/Testimonial";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Hero />
           <About />
           <Services />
+          <Testimonial />
           <Contact />
         </main>
       </div>

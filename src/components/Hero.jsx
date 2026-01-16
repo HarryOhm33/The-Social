@@ -31,6 +31,15 @@ const Hero = () => {
       id="hero"
       className={`min-h-screen flex flex-col ${theme.background}`}
     >
+      {/* ================= BOTTOM FULL-WIDTH GIF ================= */}
+      <div className="w-screen overflow-hidden">
+        <img
+          src="/slider.gif"
+          alt="Decorative motion strip"
+          className="w-full h-[90px] object-fill"
+        />
+      </div>
+
       {/* ================= MAIN HERO CONTENT ================= */}
       <div className="flex-1 flex items-center">
         <div className="container mx-auto px-4">
@@ -56,7 +65,7 @@ const Hero = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
-                  className={theme.primary}
+                  className="text-[#5631C0]"
                 >
                   built with intention.
                 </motion.span>
@@ -104,7 +113,7 @@ const Hero = () => {
                     duration={500}
                     className={`inline-flex items-center px-8 py-4 ${theme.buttonSecondary} ${theme.buttonSecondaryHover} font-semibold rounded-lg cursor-pointer ${theme.shadow}`}
                   >
-                    Learn More
+                    View My Work
                   </Link>
                 </motion.div>
               </div>
@@ -127,15 +136,6 @@ const Hero = () => {
             </motion.div>
           </div>
         </div>
-      </div>
-
-      {/* ================= BOTTOM FULL-WIDTH GIF ================= */}
-      <div className="w-screen overflow-hidden">
-        <img
-          src="/slider.gif"
-          alt="Decorative motion strip"
-          className="w-full h-[90px] object-fill"
-        />
       </div>
     </section>
   );

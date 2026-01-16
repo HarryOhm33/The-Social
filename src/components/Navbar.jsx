@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: "Home", to: "hero" },
     { name: "About", to: "about" },
     { name: "Services", to: "services" },
+    { name: "Testimonials", to: "testimonials" },
   ];
 
   return (
