@@ -33,10 +33,18 @@ const Hero = () => {
     >
       {/* ================= BOTTOM FULL-WIDTH GIF ================= */}
       <div className="w-screen overflow-hidden">
+        {/* Desktop / Tablet */}
         <img
           src="/slider.gif"
           alt="Decorative motion strip"
-          className="w-full h-[90px] object-fill"
+          className="hidden md:block w-full h-[65px] object-fill"
+        />
+
+        {/* Mobile */}
+        <img
+          src="/slider_2.gif"
+          alt="Decorative motion strip"
+          className="block md:hidden w-full h-[60px] object-fill"
         />
       </div>
 
@@ -106,15 +114,14 @@ const Hero = () => {
                   whileHover="hover"
                   whileTap="tap"
                 >
-                  <Link
-                    to="about"
-                    smooth
-                    offset={-80}
-                    duration={500}
+                  <a
+                    href="https://www.behance.net/gallery/238946305/Portfolio-Social-Media-B2B-Marketing-Copywriting"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`inline-flex items-center px-8 py-4 ${theme.buttonSecondary} ${theme.buttonSecondaryHover} font-semibold rounded-lg cursor-pointer ${theme.shadow}`}
                   >
                     View My Work
-                  </Link>
+                  </a>
                 </motion.div>
               </div>
             </motion.div>
