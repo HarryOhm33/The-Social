@@ -13,7 +13,7 @@ const Testimonial = () => {
       quote:
         "Ayushi brought structure and clarity to our social media. Her content systems helped simplify complex SaaS messaging and drive consistent engagement.",
       rating: 5,
-      photo: "/src/assets/testimonials/aryan.jpg", // Add your image path here
+      photo: "/aryan.jpeg", // Add your image path here
     },
     {
       name: "Samrat Saurav",
@@ -21,7 +21,7 @@ const Testimonial = () => {
       quote:
         "Ayushi works with ownership and a clear process. She brought consistency and direction to our content and branding efforts.",
       rating: 5,
-      photo: "/src/assets/testimonials/samrat.jpg", // Add your image path here
+      photo: "/samrat.jpeg", // Add your image path here
     },
     {
       name: "Hari Om",
@@ -29,7 +29,7 @@ const Testimonial = () => {
       quote:
         "Ayushi focuses on intent, not just content. Her strategic approach helped us communicate better and build trust with our audience.",
       rating: 5,
-      photo: "/src/assets/testimonials/hari.jpg", // Add your image path here
+      photo: "/hari.jpeg", // Add your image path here
     },
   ];
 
