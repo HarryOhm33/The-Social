@@ -118,7 +118,7 @@ const Hero = () => {
                     href="https://www.behance.net/gallery/238946305/Portfolio-Social-Media-B2B-Marketing-Copywriting"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center px-8 py-4 ${theme.buttonSecondary} ${theme.buttonSecondaryHover} font-semibold rounded-lg cursor-pointer ${theme.shadow}`}
+                    className={`inline-flex items-center px-7 py-4 ${theme.buttonSecondary} ${theme.buttonSecondaryHover} font-semibold rounded-lg cursor-pointer ${theme.shadow}`}
                   >
                     View My Work
                   </a>

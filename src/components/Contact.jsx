@@ -16,7 +16,7 @@ const Contact = () => {
   const { theme } = useTheme();
 
   const contactInfo = {
-    email: "thesocialayushi@gmail.com",
+    email: "info@thesocialayushi.com",
     phone: "+91 7004374521",
     quickLinks: [
       { name: "Home", to: "hero" },
