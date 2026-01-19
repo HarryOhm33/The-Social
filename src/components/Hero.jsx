@@ -32,7 +32,7 @@ const Hero = () => {
       className={`min-h-screen flex flex-col ${theme.background}`}
     >
       {/* ================= BOTTOM FULL-WIDTH GIF ================= */}
-      <div className="w-screen overflow-hidden">
+      <div className="w-full overflow-hidden">
         {/* Desktop / Tablet */}
         <img
           src="/slider.gif"
